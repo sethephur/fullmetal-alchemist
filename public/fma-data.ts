@@ -22,7 +22,7 @@ const data: Character[] = [
     skillset: ['Being Loveable, Alchemy'],
     votes: 110,
     background: 'Alphonse is a walking suit of armor on a quest to find his real body',
-    imageUrl: 'https://static.wikia.nocookie.net/fullmetal-alchemist-database/images/f/f6/AlphonseElricEp7.png',
+    imageUrl: 'https://upload.wikimedia.org/wikipedia/en/7/7c/AlphonseElricArakawa.jpg',
   },
   {
     name: 'Edward Elrich',

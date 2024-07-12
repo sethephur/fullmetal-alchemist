@@ -16,12 +16,13 @@ interface MyComponentProps {
 
 export const CharacterRatings: React.FC<MyComponentProps> = ({ data }) => {
   const topRatedCharacters = data
+    .slice()
     .sort((a, b) => b.votes - a.votes)
     .slice(0, 5)
     .map((topRatedCharacter: Character, index: number) => (
       <tr key={index} className={index % 2 === 0 ? 'dark' : 'light'}>
-        <td>{topRatedCharacter.name}</td>
-        <td>{topRatedCharacter.skillset.map((skill) => skill + ', ')}</td>
+        <td>{`${topRatedCharacter.name}${topRatedCharacter.nickName ? ` "${topRatedCharacter.nickName}"` : ''}`}</td>
+        <td>{topRatedCharacter.skillset.join(', ')}</td>
         <td>{topRatedCharacter.votes}</td>
       </tr>
     ));
